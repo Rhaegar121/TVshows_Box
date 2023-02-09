@@ -29,8 +29,8 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 60px;
-  border-bottom: 1px solid #cdcdcd;
+  padding: 10px 47px;
+  background-color: var(--card-color);
 }
 
 header #logo {
@@ -46,24 +46,21 @@ header #logo {
 }
 
 header #link a {
+  color: #f2f4f6b3;
   text-decoration: none;
   font-size: 20px;
   margin-left: 60px;
 }
 
-header #link #movie {
-  text-decoration: underline;
-}
-
 #counter {
   position: absolute;
   text-align: center;
-  right: 60px;
-  top: 89px;
-  padding: 7px 0;
-  border: 2px solid #000;
-  width: 290px;
-  box-shadow: 3px 3px #292929;
+  right: 46.5px;
+  top: 110px;
+  padding: 13px 0;
+  width: 240px;
+  background-color: #252e39;
+  border-radius: 3px;
 }
 
 #home {
@@ -71,7 +68,7 @@ header #link #movie {
   display: grid;
   grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
   gap: 43px;
-  margin: 40px auto;
+  margin: 100px auto;
 }
 
 #home .container {
@@ -79,7 +76,7 @@ header #link #movie {
   flex-direction: column;
   align-items: center;
   background-color: var(--card-color);
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 #home .container img {
@@ -87,8 +84,8 @@ header #link #movie {
   height: 300px;
   object-fit: cover;
   margin-bottom: 20px;
-  border-top-right-radius: 7px;
-  border-top-left-radius: 7px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 #home .container .caption {
@@ -190,11 +187,10 @@ header #link #movie {
 }
 
 footer {
-  padding: 30px;
+  padding: 20px;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid #cdcdcd;
-  background-color: #fff;
+  background-color: var(--card-color);
 }
 
 .close {
