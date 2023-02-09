@@ -55,7 +55,7 @@ header #link a {
 #counter {
   position: absolute;
   text-align: center;
-  right: 46.5px;
+  right: 103px;
   top: 110px;
   padding: 13px 0;
   width: 240px;
@@ -64,11 +64,12 @@ header #link a {
 }
 
 #home {
-  width: 95%;
+  width: 93%;
   display: grid;
   grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
-  gap: 43px;
+  gap: 30px;
   margin: 100px auto;
+  padding-left: 50px;
 }
 
 #home .container {
@@ -103,7 +104,11 @@ header #link a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 10px;
+}
+
+#home .container .caption .title .name {
+  font-size: 18px;
 }
 
 #home .container .caption .title .rating {
@@ -115,7 +120,7 @@ header #link a {
 
 #home .container .caption .title .rating button {
   font-size: 15px;
-  padding: 6px 8px;
+  padding: 6px 9px;
   color: var(--text-color);
   background-color: var(--background-color);
   border: 1px solid var(--text-color);
@@ -129,13 +134,13 @@ header #link a {
 }
 
 #home .container .caption .title .rating .ratingNumber {
-  font-size: 15px;
+  font-size: 14.5px;
   margin-right: 5px;
 }
 
 #home .container .caption .title .rating .imdb {
   font-family: 'Anton', sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   letter-spacing: 0.6px;
   border-radius: 3px;
   padding: 2px 4px;

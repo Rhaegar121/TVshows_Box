@@ -23,7 +23,7 @@ const displayMovie = async () => {
           <p class="rating">
             <span class="imdb">IMDb</span>
             <span class="ratingNumber">${data.rating.average}</span>
-            <button id="film${index}">TV show-info</button>
+            <button id="film${index}">show-info</button>
           </p>
         </span>
         <span class="sub-title">
