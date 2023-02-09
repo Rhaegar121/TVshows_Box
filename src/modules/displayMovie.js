@@ -1,6 +1,7 @@
 import {
   getMovie, getLike, postLike,
 } from './fetch.js';
+import movieCount from './movieCounter.js';
 
 const displayMovie = async () => {
   const home = document.querySelector('#home');
@@ -47,6 +48,10 @@ const displayMovie = async () => {
         like.innerHTML = '1';
       }
     };
+
+    // counting movies
+    const countMovie = document.querySelector('#counter');
+    countMovie.innerHTML = `Total Number of Series: ${movieCount()}`;
   });
 };
 
