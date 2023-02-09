@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: #fff;
 }
 
 :root {
-  --border: black;
-  --my-border: 2px solid var(--border);
+  --card-color: #1b2530;
+  --background-color: #0f171e;
+  --text-color: #8197a4;
 }
 
 img {
@@ -21,7 +27,7 @@ img {
 header {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 60px;
   border-bottom: 1px solid #cdcdcd;
@@ -43,7 +49,6 @@ header #link a {
   text-decoration: none;
   font-size: 20px;
   margin-left: 60px;
-  color: #000;
 }
 
 header #link #movie {
@@ -62,34 +67,105 @@ header #link #movie {
 }
 
 #home {
+  width: 95%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  row-gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
+  gap: 43px;
+  margin: 40px auto;
 }
 
 #home .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--card-color);
+  border-radius: 7px;
 }
 
 #home .container img {
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   margin-bottom: 20px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
 #home .container .caption {
-  font-size: 19px;
+  width: 100%;
+  font-size: 20px;
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  background-color: var(--card-color);
+}
+
+#home .container .caption .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+#home .container .caption .title .rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+}
+
+#home .container .caption .title .rating button {
+  font-size: 15px;
+  padding: 5px 8px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--text-color);
+  border-radius: 13px;
+}
+
+#home .container .caption .title .rating button:hover{
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border: var(--background-color);
+}
+
+#home .container .caption .title .rating .ratingNumber {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+#home .container .caption .title .rating .imdb {
+  font-family: 'Anton', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  border-radius: 3px;
+  padding: 2px 4px;
+  border: 1px solid var(--text-color);
+  background-color: var(--background-color);
+}
+
+#home .container .caption .sub-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-color);
+}
+
+#home .container .caption #like {
+  font-size: 14px;
+}
+
+#home .container .caption .fa-heart {
+  font-size: 27px;
+  transition: all 0.3s ease-in-out;
 }
 
 #home .container .caption .fa-heart:hover {
   cursor: pointer;
+  transform: translateY(-10%);
 }
 
 #home .container .caption .fa-heart:active {
@@ -103,13 +179,6 @@ header #link #movie {
   border: var(--my-border);
   box-shadow: 2px 2px black;
   cursor: pointer;
-}
-
-#home .container button {
-  background-color: #fff;
-  padding: 7px;
-  margin: 5px 0;
-  box-shadow: 3px 3px #292929;
 }
 
 #home .container button:hover {
