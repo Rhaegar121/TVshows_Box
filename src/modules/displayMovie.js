@@ -15,22 +15,37 @@ const displayMovie = async () => {
     // creating a new div element
     const dataCard = document.createElement('div');
     dataCard.classList.add('container');
-    dataCard.innerHTML = `<img src="${data.image.medium}" alt="${data.name}">
+    dataCard.innerHTML = `<img src="${data.image.original}" alt="${data.name}">
       <div class="caption">
-      <span class="title">${data.name}</span>
-      <i class="fa-regular fa-heart"></i>
+        <span class="title">
+          <p class="name">${data.name}</p>
+          <p class="rating">
+            <span class="imdb">IMDb</span>
+            <span class="ratingNumber">${data.rating.average}</span>
+            <button id="film${index}">TV show-info</button>
+          </p>
+        </span>
+        <span class="sub-title">
+          <i class="fa-regular fa-heart"></i>
+          <span id="like">${likes.length > 0 ? likes[0].likes : 0}</span>
+        </span>
       </div>
-      <p id="like">${likes.length > 0 ? likes[0].likes : 0} Likes</p>
-      <button id="film${index}">Comments</button>
-      <button>Reservations</button>`;
+      `;
     home.appendChild(dataCard);
 
     // posting likes on the home page
     const likeBtn = dataCard.querySelector('.fa-heart');
     likeBtn.onclick = () => {
-      const like = dataCard.querySelector('#like');
+      likeBtn.style.color = '#8197a4';
+      likeBtn.classList.remove('fa-regular');
+      likeBtn.classList.add('fa-solid');
       postLike(data.id);
-      like.innerHTML = `${likes[0].likes + 1} Likes`;
+      const like = dataCard.querySelector('#like');
+      if (likes.length > 0) {
+        like.innerHTML = `${likes[0].likes + 1}`;
+      } else {
+        like.innerHTML = '1';
+      }
     };
   });
 };
