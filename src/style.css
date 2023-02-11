@@ -120,7 +120,7 @@ header #link a {
 
 #home .container .caption .title .rating button {
   font-size: 15px;
-  padding: 6px 9px;
+  padding: 4px 9px;
   color: var(--text-color);
   background-color: var(--background-color);
   border: 1px solid var(--text-color);
@@ -131,6 +131,12 @@ header #link a {
   background-color: var(--text-color);
   color: var(--background-color);
   border: 1px solid var(--background-color);
+}
+
+#home .container .caption .title .rating button .fa-plus {
+  margin-left: 4px;
+  font-size: 14px;
+  transform: translateY(2%);
 }
 
 #home .container .caption .title .rating .ratingNumber {
