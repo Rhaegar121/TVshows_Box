@@ -12,6 +12,18 @@ body {
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252e39;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
+
 :root {
   --card-color: #1b2530;
   --background-color: #0f171e;
@@ -68,7 +80,7 @@ header #link a {
   display: grid;
   grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
   gap: 30px;
-  margin: 100px auto;
+  margin: 100px auto 30px auto;
   padding-left: 50px;
 }
 
