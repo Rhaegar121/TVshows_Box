@@ -209,7 +209,6 @@ header #link a {
   height: 100%;
   position: fixed;
   top: 0;
-  overflow: hidden;
   overflow-y: auto;
   background-color: var(--background-color);
   z-index: 9999;
