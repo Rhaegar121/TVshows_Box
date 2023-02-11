@@ -23,11 +23,11 @@ const displayMovie = async () => {
           <p class="name">${data.name}</p>
           <p class="rating">
             <span class="imdb">IMDb</span>
-            <span class="ratingNumber">${data.rating.average}</span>
-            <button id="info${data.id}">show-info<i class="fa-solid fa-plus"></i></button>
+            <span class="ratingNumber">${data.rating.average}/10</span>
+            <button id="info${data.id}">Info<i class="fa-solid fa-plus"></i></button>
           </p>
         </span>
-        <span class="sub-title">
+        <span class="subcaption">
           <i class="fa-regular fa-heart"></i>
           <span id="like">${likes.length > 0 ? likes[0].likes : 0}</span>
         </span>
