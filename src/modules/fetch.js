@@ -1,6 +1,6 @@
 import { baseUrl, involvementUrl } from './api.js';
 
-const getMovie = async () => {
+const getShow = async () => {
   const response = await fetch(baseUrl);
   const data = await response.json();
   return data;
@@ -24,6 +24,13 @@ const postLike = async (id) => {
   });
 };
 
+const getOneShow = async (id) => {
+  const showUrl = `${baseUrl}/${id}`;
+  const response = await fetch(showUrl);
+  const data = await response.json();
+  return data;
+};
+
 export {
-  getMovie, getLike, postLike,
+  getShow, getLike, postLike, getOneShow,
 };
