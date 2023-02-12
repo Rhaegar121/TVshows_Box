@@ -355,6 +355,7 @@ footer {
 
   #home .container img {
     height: 230px;
+    margin-bottom: 12px;
   }
 
   #home .container .caption {
