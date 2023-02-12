@@ -389,8 +389,8 @@ footer {
   #home .container .caption .title .rating button {
     display: block;
     margin-top: 12px;
-    font-size: 14px;
-    padding: 3px 10px;
+    font-size: 15px;
+    padding: 5px 12px;
     border-radius: 5px;
   }
 
@@ -402,7 +402,7 @@ footer {
   #home .container .caption .subcaption {
     position: absolute;
     right: 5%;
-    bottom: 8%;
+    bottom: 8.5%;
   }
 
   #home .container .caption #like {
@@ -410,7 +410,7 @@ footer {
   }
 
   #home .container .caption .fa-heart {
-    font-size: 22px;
+    font-size: 24.5px;
   }
 }
 
