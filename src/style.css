@@ -309,6 +309,143 @@ header #link a:first-child {
   color: var(--text-color);
 }
 
+/* comment */
+#comment {
+  width: 100%;
+  padding: 20px 0px;
+  margin: 30px auto;
+  background-color: var(--card-color);
+  border-radius: 7px;
+}
+
+#comment h2 {
+  text-align: center;
+}
+
+#comment h2::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+}
+
+.comment-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 80px;
+}
+
+.comment-container form {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-container form .leave-comment {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.comment-container form .leave-comment .fa-comment {
+  margin-right: 5px;
+}
+
+.comment-container form input {
+  width: 60%;
+  height: 30px;
+  border: none;
+  background-color: var(--background-color);
+}
+
+.comment-container form input::placeholder {
+  color: var(--text-color);
+  padding-left: 7px;
+}
+
+.comment-container form textarea {
+  height: 60px;
+  border: none;
+  background-color: var(--background-color);
+}
+
+.comment-container form textarea::placeholder {
+  padding-left: 7px;
+  padding-top: 7px;
+  color: var(--text-color);
+}
+
+.comment-container form button {
+  width: fit-content;
+  padding: 10px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.comment-container form button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.comment-container form button:active {
+  border: 1px solid var(--text-color);
+}
+
+.comments p {
+  display: flex;
+  align-items: end;
+  margin: 15px auto;
+  gap: 20px;
+  position: relative;
+}
+
+.comments .fa-circle-user {
+  font-size: 35px;
+  color: var(--text-color);
+}
+
+.comments .fa-circle-user::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 36px;
+  position: absolute;
+  left: 12.5%;
+  transform: translateY(-7%);
+  background-color: var(--text-color);
+}
+
+.comments .comment-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comments .comment-detail .comment-caption {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.comments .comment-detail .comment-name {
+  font-size: 11px;
+  margin-right: 3px;
+}
+
+.comments .comment-detail .comment-date {
+  font-size: 9px;
+  border: 1px solid var(--text-color);
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.comments .comment-detail .comment-comment {
+  font-size: 14px;
+}
+
 footer {
   padding: 20px;
   bottom: 0;

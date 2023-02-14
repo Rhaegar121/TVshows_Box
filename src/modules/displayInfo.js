@@ -37,14 +37,16 @@ const displayInfo = async (id) => {
             </div>
         </div>
         <div id="comment">
-          <h2></h2>
-          <div class="comments"></div>
-          <p class="leave-comment"></p>
-          <form action="">
-            <input type="text" id="name" placeholder="Your name">
-            <textarea type="text" id="comments" placeholder="Your insights" maxlength="500"></textarea>
-            <button type="submit" id="submitComment">Comment</button>
-          </form>
+          <h2>Comments</h2>
+          <div class="comment-container">
+            <form action="" method="POST">
+              <p class="leave-comment"><i class="fa-regular fa-comment"></i> Leave a comment</p>
+              <input type="text" id="name" placeholder="Your name">
+              <textarea type="text" id="comments" placeholder="Your insights" maxlength="500"></textarea>
+              <button type="submit" id="submitComment">Comment</button>
+            </form>
+            <div class="comments"></div>
+          </div>
         </div>`;
 
   // adding genre
@@ -63,13 +65,14 @@ const displayInfo = async (id) => {
       commentCard.innerHTML += `
       <p>
         <i class="fa-solid fa-circle-user"></i>
-        <span>
+        <span class="comment-detail">
           <span class="comment-caption">
             <span class="comment-name">${comment.username}</span>
             <span class="comment-date">${comment.creation_date}</span>
           </span>
           <span class="comment-comment">${comment.comment}</span>
-        </span>`;
+        </span>
+      </p>`;
     });
   }
 
