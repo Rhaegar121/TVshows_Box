@@ -1,3 +1,4 @@
+import countComments from './commentCounter.js';
 import { getOneShow, getComment } from './fetch.js';
 
 const displayInfo = async (id) => {
@@ -37,7 +38,7 @@ const displayInfo = async (id) => {
             </div>
         </div>
         <div id="comment">
-          <h2>Comments</h2>
+          <h2></h2>
           <div class="comment-container">
             <form action="" method="POST">
               <p class="leave-comment"><i class="fa-regular fa-comment"></i> Leave a comment</p>
@@ -56,14 +57,16 @@ const displayInfo = async (id) => {
   });
   info.appendChild(infoCard);
 
+  
+
   // adding comments
-  const commentCard = infoCard.querySelector('.comments');
+  const commentCard = document.querySelector('.comments');
   // fetching particular comments from the API
   const comments = await getComment(id);
   if (!comments.error) {
     comments.forEach((comment) => {
       commentCard.innerHTML += `
-      <p>
+      <p class="comment-card">
         <i class="fa-solid fa-circle-user"></i>
         <span class="comment-detail">
           <span class="comment-caption">
@@ -75,6 +78,12 @@ const displayInfo = async (id) => {
       </p>`;
     });
   }
+
+  // adding comment counter
+  const commentTitle = infoCard.querySelector('h2');
+  // fetching comment counter from the API
+  const allComments = countComments();
+  commentTitle.innerHTML = `Comments (${allComments})`;
 
   // closing info popup
   const closeBtn = document.querySelector(`#close${id}`);

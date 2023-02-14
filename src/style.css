@@ -398,7 +398,7 @@ header #link a:first-child {
   border: 1px solid var(--text-color);
 }
 
-.comments p {
+.comments .comment-card {
   display: flex;
   align-items: center;
   margin: 15px auto;
