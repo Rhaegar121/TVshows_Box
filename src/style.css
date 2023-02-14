@@ -357,23 +357,27 @@ header #link a:first-child {
   width: 60%;
   height: 30px;
   border: none;
+  outline: none;
+  padding-left: 7px;
+  color: var(--text-color);
   background-color: var(--background-color);
 }
 
 .comment-container form input::placeholder {
   color: var(--text-color);
-  padding-left: 7px;
 }
 
 .comment-container form textarea {
   height: 60px;
   border: none;
+  outline: none;
+  padding-left: 7px;
+  padding-top: 7px;
+  color: var(--text-color);
   background-color: var(--background-color);
 }
 
 .comment-container form textarea::placeholder {
-  padding-left: 7px;
-  padding-top: 7px;
   color: var(--text-color);
 }
 
@@ -396,14 +400,13 @@ header #link a:first-child {
 
 .comments p {
   display: flex;
-  align-items: end;
+  align-items: center;
   margin: 15px auto;
-  gap: 20px;
-  position: relative;
+  gap: 15px;
 }
 
 .comments .fa-circle-user {
-  font-size: 35px;
+  font-size: 37px;
   color: var(--text-color);
 }
 
@@ -411,17 +414,16 @@ header #link a:first-child {
   content: '';
   display: inline-block;
   width: 1px;
-  height: 36px;
-  position: absolute;
-  left: 12.5%;
-  transform: translateY(-7%);
+  height: 38px;
+  transform: translateY(10%);
+  margin-left: 10px;
   background-color: var(--text-color);
 }
 
 .comments .comment-detail {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
 }
 
 .comments .comment-detail .comment-caption {
@@ -432,7 +434,7 @@ header #link a:first-child {
 
 .comments .comment-detail .comment-name {
   font-size: 11px;
-  margin-right: 3px;
+  margin-right: 7px;
 }
 
 .comments .comment-detail .comment-date {
