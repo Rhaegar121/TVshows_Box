@@ -57,8 +57,6 @@ const displayInfo = async (id) => {
   });
   info.appendChild(infoCard);
 
-  
-
   // adding comments
   const commentCard = document.querySelector('.comments');
   // fetching particular comments from the API
