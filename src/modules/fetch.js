@@ -31,6 +31,12 @@ const getOneShow = async (id) => {
   return data;
 };
 
+const getComment = async (id) => {
+  const response = await fetch(`${involvementUrl}comments?item_id=${id}`);
+  const data = await response.json();
+  return data;
+};
+
 export {
-  getShow, getLike, postLike, getOneShow,
+  getShow, getLike, postLike, getOneShow, getComment,
 };
