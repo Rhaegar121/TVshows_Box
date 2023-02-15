@@ -1,5 +1,5 @@
+import { getOneShow, getComment, postComment } from './fetch.js';
 import countComments from './commentCounter.js';
-import { getOneShow, getComment } from './fetch.js';
 
 const displayInfo = async (id) => {
   const info = document.querySelector('#info');
@@ -44,7 +44,7 @@ const displayInfo = async (id) => {
               <p class="leave-comment"><i class="fa-regular fa-comment"></i> Leave a comment</p>
               <input type="text" id="name" placeholder="Your name">
               <textarea type="text" id="comments" placeholder="Your insights" maxlength="500"></textarea>
-              <button type="submit" id="submitComment">Comment</button>
+              <button type="submit" id="submit">Comment</button>
             </form>
             <div class="comments"></div>
           </div>
@@ -57,14 +57,17 @@ const displayInfo = async (id) => {
   });
   info.appendChild(infoCard);
 
-  // adding comments
-  const commentCard = document.querySelector('.comments');
-  // fetching particular comments from the API
-  const comments = await getComment(id);
-  if (!comments.error) {
-    comments.forEach((comment) => {
-      commentCard.innerHTML += `
-      <p class="comment-card">
+  // updating comments
+  const updateComment = async (id) => {
+    // adding comments
+    const commentCard = document.querySelector('.comments');
+    // fetching particular comments from the API
+    const comments = await getComment(id);
+    let innerText = '';
+    if (!comments.error) {
+      comments.forEach((comment) => {
+        innerText += `
+        <p class=comment-card>
         <i class="fa-solid fa-circle-user"></i>
         <span class="comment-detail">
           <span class="comment-caption">
@@ -73,13 +76,32 @@ const displayInfo = async (id) => {
           </span>
           <span class="comment-comment">${comment.comment}</span>
         </span>
-      </p>`;
-    });
-  }
+        </p>`;
+      });
+      commentCard.innerHTML = innerText;
+    }
 
-  // adding comment counter
-  const commentTitle = infoCard.querySelector('h2');
-  commentTitle.innerHTML = `Comments (${countComments()})`;
+    // adding comment counter
+    const commentTitle = document.querySelector('h2');
+    commentTitle.innerHTML = `Comments (${countComments()})`;
+  };
+  // show comments
+  updateComment(id);
+
+  // posting new comments
+  const inputName = document.querySelector('#name');
+  const inputComment = document.querySelector('#comments');
+  const submitBtn = document.querySelector('#submit');
+  submitBtn.onclick = async (e) => {
+    e.preventDefault();
+    if (inputName.value !== '' && inputComment.value !== '') {
+      await postComment(id, inputName.value, inputComment.value);
+
+      inputName.value = '';
+      inputComment.value = '';
+    }
+    updateComment(id);
+  };
 
   // closing info popup
   const closeBtn = document.querySelector(`#close${id}`);
