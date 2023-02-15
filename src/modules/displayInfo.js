@@ -79,9 +79,7 @@ const displayInfo = async (id) => {
 
   // adding comment counter
   const commentTitle = infoCard.querySelector('h2');
-  // fetching comment counter from the API
-  const allComments = countComments();
-  commentTitle.innerHTML = `Comments (${allComments})`;
+  commentTitle.innerHTML = `Comments (${countComments()})`;
 
   // closing info popup
   const closeBtn = document.querySelector(`#close${id}`);
