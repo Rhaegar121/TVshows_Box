@@ -37,6 +37,20 @@ const getComment = async (id) => {
   return data;
 };
 
+const postComment = async (id, username, comment) => {
+  await fetch(`${involvementUrl}comments/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: id,
+      username,
+      comment,
+    }),
+  });
+};
+
 export {
-  getShow, getLike, postLike, getOneShow, getComment,
+  getShow, getLike, postLike, getOneShow, getComment, postComment,
 };
