@@ -41,21 +41,17 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 47px;
+  padding: 15px 47px;
   background-color: var(--card-color);
 }
 
 header #logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  font-weight: 600;
-  color: #f2f4f6b3;
-  border: 2px solid #f2f4f6b3;
+  width: 60px;
+  height: 60px;
+}
+
+header #logo img {
   border-radius: 50%;
-  padding: 13px;
 }
 
 header #link a {
@@ -451,16 +447,12 @@ footer {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 8px 15px;
+    padding: 10px 15px;
   }
 
   header #logo {
-    font-size: 9px;
-    padding: 15px;
-  }
-
-  header #logo span:last-child {
-    width: 43px;
+    width: 45px;
+    height: 45px;
   }
 
   header #link a {
