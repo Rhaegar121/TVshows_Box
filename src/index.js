@@ -11,16 +11,18 @@ window.onload = () => {
   const contact = document.querySelector('#contact');
   const home = document.querySelector('#home');
   const counter = document.querySelector('#counter');
-  
+
+  // showing home page
   homeBtn.onclick = () => {
     home.style.display = 'grid';
     contact.style.display = 'none';
     counter.style.display = 'block';
-  }
+  };
 
+  // showing contact page
   contactBtn.onclick = () => {
     contact.style.display = 'block';
     home.style.display = 'none';
     counter.style.display = 'none';
-  }
+  };
 };
