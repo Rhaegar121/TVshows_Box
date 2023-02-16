@@ -52,6 +52,8 @@ header #logo {
 
 header #logo img {
   border-radius: 50%;
+  box-shadow: none;
+  object-fit: cover;
 }
 
 header #link a {
