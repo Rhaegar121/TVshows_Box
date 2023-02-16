@@ -14,9 +14,9 @@
                 <img src="../photo/tvshow logo.jpg" alt="logo">
             </nav>
             <nav id="link">
-                <a href="#">TV shows</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#home" id="show">TV shows</a>
+                <a href="https://www.tvmaze.com/api" target="_blank">API</a>
+                <a href="#" id="contact">Contact</a>
             </nav>
     </header>
 
@@ -29,8 +29,54 @@
     <section id="info">
     </section>
 
-    <section id="about">
-        
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p class="contact-para">Do you have any questions or you just want to say "Hello"? You can reach out to me!</p>
+        <form action="">
+            <input
+            type="text"
+            placeholder="Full name"
+            required
+            maxlength="30"
+            name="name"
+            id="name"
+          />
+          <input
+            type="email"
+            placeholder="Email address"
+            required
+            name="email"
+            id="email"
+          />
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="Say something"
+            required
+            maxlength="500"
+            name="message"
+            id="message"
+          ></textarea>
+          <button type="submit">Get in touch</button>
+        </form>
+        <ul class="social-media-icon-form">
+            <li>
+              <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/kaung-myat-kyaw-barry-391720227/" target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/linthantkhai" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/Rhaegar121" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/rhaegar_121/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
     </section>
     
     <footer id="footer">Created by Barry under CC license</footer>
