@@ -80,12 +80,13 @@ header #link a:first-child {
 }
 
 #home {
-  width: 93%;
+  width: 98%;
   display: grid;
-  grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
-  gap: 30px;
+  /* grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%; */
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  gap: 25px;
   margin: 100px auto 30px auto;
-  padding-left: 50px;
+  padding-left: 15px;
 }
 
 #home .container {
