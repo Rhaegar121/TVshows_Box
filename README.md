@@ -40,8 +40,8 @@
 
 > TVshows Box is a web application showing multiple TV shows with the help of TVmaze API which contains both mobile and desktop versions. The webapp have 3 interfaces:
 
-- A home page showing a list of items that you can "like."
-- A popup window with more data about an item that you can use to comment on it.
+- A home page showing a list of shows that you can "like."
+- A popup window with more data about a show that you can use to comment on it.
 - A contact page showing contact form and social media icon link
 
 **TVshows Box** is a HTML, CSS and JavaScript based project.
