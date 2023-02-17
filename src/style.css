@@ -506,11 +506,65 @@ header #link a:first-child {
   margin: 50px auto;
   background-color: var(--card-color);
   padding: 20px;
+  border-radius: 7px;
 }
 
 .contact-container h1 {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.contact-container #contact-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.contact-container #contact-form input {
+  width: 70%;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left: 7px;
+  color: var(--text-color);
+  background-color: var(--background-color)
+}
+
+.contact-container #contact-form input::placeholder {
+  color: var(--text-color);
+}
+
+.contact-container #contact-form textarea {
+  height: 60px;
+  border: none;
+  outline: none;
+  padding-left: 7px;
+  padding-top: 7px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.contact-container #contact-form textarea::placeholder {
+  color: var(--text-color);
+}
+
+.contact-container #contact-form button {
+  width: fit-content;
+  padding: 10px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.contact-container #contact-form button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.contact-container #contact-form button:active {
+  border: 1px solid var(--text-color);
 }
 
 footer {
