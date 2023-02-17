@@ -18,7 +18,7 @@ window.onload = () => {
     contact.style.display = 'none';
     counter.style.display = 'block';
   };
-  
+
   // showing contact page
   contactBtn.onclick = () => {
     contact.style.display = 'block';
@@ -29,16 +29,16 @@ window.onload = () => {
   // mobile menu
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('#link');
-const menuToggle = () => {
-  hamburger.classList.toggle('open');
-  if (mobileMenu.style.display === 'flex') {
-    mobileMenu.style.display = 'none';
-  } else {
-    mobileMenu.style.display = 'flex';
-  }
-};
+  const menuToggle = () => {
+    hamburger.classList.toggle('open');
+    if (mobileMenu.style.display === 'flex') {
+      mobileMenu.style.display = 'none';
+    } else {
+      mobileMenu.style.display = 'flex';
+    }
+  };
 
-hamburger.onclick = () => {
-  menuToggle();
-};
+  hamburger.onclick = () => {
+    menuToggle();
+  };
 };
