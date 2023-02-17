@@ -27,7 +27,7 @@
 # 📖 TVshows Box <a name="about-project"></a>
 
 <div align="center">
-  <img src="../photo/tvshow screenshot 1.jpg" alt="project sample" width="650"  height="auto" />
+  <img src="tvshow screenshot 1.jpg" alt="project sample" width="650"  height="auto" />
   <br/>
   <img src="../photo/tvshow screenshot 2.jpg" alt="project sample" width="650"  height="auto" />
   <br/>
