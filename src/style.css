@@ -363,7 +363,7 @@ header #link a:first-child {
 /* comment */
 #comment {
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 0;
   margin: 30px auto;
   background-color: var(--card-color);
   border-radius: 7px;
@@ -454,7 +454,7 @@ header #link a:first-child {
   align-items: center;
   margin: 15px auto;
   gap: 10px;
-  padding: 0px 10px;
+  padding: 0 10px;
   position: relative;
 }
 
@@ -537,7 +537,7 @@ header #link a:first-child {
   outline: none;
   padding-left: 7px;
   color: var(--text-color);
-  background-color: var(--background-color)
+  background-color: var(--background-color);
 }
 
 .contact-container #contact-form input::placeholder {
@@ -631,7 +631,7 @@ footer {
     from {
       left: 70%;
     }
-  
+
     to {
       left: 50%;
     }
@@ -775,7 +775,7 @@ footer {
   }
 
   .contact-container #contact-form {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .contact-container #contact-form input {
@@ -812,6 +812,7 @@ footer {
     gap: 15px;
     width: 170px;
   }
+
   header #link a {
     font-size: 13.5px;
   }
