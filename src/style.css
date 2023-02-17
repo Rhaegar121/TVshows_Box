@@ -503,7 +503,7 @@ header #link a:first-child {
 
 .contact-container {
   width: 500px;
-  margin: 50px auto;
+  margin: 55px auto;
   background-color: var(--card-color);
   padding: 20px;
   border-radius: 7px;
@@ -512,6 +512,14 @@ header #link a:first-child {
 .contact-container h1 {
   text-align: center;
   margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.contact-container .contact-para {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
 }
 
 .contact-container #contact-form {
@@ -519,12 +527,12 @@ header #link a:first-child {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .contact-container #contact-form input {
   width: 70%;
-  height: 30px;
+  height: 40px;
   border: none;
   outline: none;
   padding-left: 7px;
@@ -537,7 +545,7 @@ header #link a:first-child {
 }
 
 .contact-container #contact-form textarea {
-  height: 60px;
+  height: 80px;
   border: none;
   outline: none;
   padding-left: 7px;
@@ -552,6 +560,7 @@ header #link a:first-child {
 
 .contact-container #contact-form button {
   width: fit-content;
+  margin: 10px auto;
   padding: 10px;
   border: none;
   color: var(--text-color);
@@ -565,6 +574,28 @@ header #link a:first-child {
 
 .contact-container #contact-form button:active {
   border: 1px solid var(--text-color);
+}
+
+.contact-container .social-media-icon-form {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  text-decoration: none;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
+.contact-container .social-media-icon-form li {
+  list-style: none;
+}
+
+.contact-container .social-media-icon-form li a {
+  font-size: 21px;
+  color: var(--text-color);
+}
+
+.contact-container .social-media-icon-form li a:hover {
+  color: #fff;
 }
 
 footer {
