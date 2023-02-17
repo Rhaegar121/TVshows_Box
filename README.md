@@ -29,9 +29,9 @@
 <div align="center">
   <img src="./photo/tvshow screenshot 1.jpg" alt="project sample" width="650"  height="auto" />
   <br/>
-  <img src="../photo/tvshow screenshot 2.jpg" alt="project sample" width="650"  height="auto" />
+  <img src="./photo/tvshow screenshot 2.jpg" alt="project sample" width="650"  height="auto" />
   <br/>
-  <img src="../photo/tvshow screenshot 3.jpg" alt="project sample" width="650"  height="auto" />
+  <img src="./photo/tvshow screenshot 3.jpg" alt="project sample" width="650"  height="auto" />
   <br/>
 
   <h3><b>TVshows Box</b></h3>
