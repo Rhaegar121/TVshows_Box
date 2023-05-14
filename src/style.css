@@ -10,6 +10,7 @@
 body {
   background-color: var(--background-color);
   color: #fff;
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -496,14 +497,18 @@ header #link a:first-child {
 /* contact page */
 #contact {
   display: none;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
 .contact-container {
-  width: 500px;
-  margin: 55px auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
   background-color: var(--card-color);
   padding: 20px;
   border-radius: 7px;
@@ -531,7 +536,7 @@ header #link a:first-child {
 }
 
 .contact-container #contact-form input {
-  width: 70%;
+  width: 100%;
   height: 40px;
   border: none;
   outline: none;
@@ -545,7 +550,7 @@ header #link a:first-child {
 }
 
 .contact-container #contact-form textarea {
-  height: 80px;
+  height: 120px;
   border: none;
   outline: none;
   padding-left: 7px;
@@ -761,8 +766,7 @@ footer {
 
   /* contact page */
   .contact-container {
-    width: 80%;
-    margin: 30px auto;
+    width: 65%;
   }
 
   .contact-container h1 {
@@ -780,11 +784,11 @@ footer {
 
   .contact-container #contact-form input {
     width: 100%;
-    height: 30px;
+    height: 40px;
   }
 
   .contact-container #contact-form textarea {
-    height: 60px;
+    height: 100px;
   }
 
   .contact-container .social-media-icon-form li a {
@@ -794,6 +798,13 @@ footer {
   footer {
     font-size: 14px;
     padding: 17px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .contact-container {
+    width: 80%;
+    padding: 20px;
   }
 }
 
