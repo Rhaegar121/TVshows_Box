@@ -605,11 +605,34 @@ header #link a:first-child {
 
 footer {
   color: var(--text-color);
-  padding: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 22.8px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  text-align: center;
   background-color: var(--card-color);
+}
+
+footer div {
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 100;
+  margin: 10px auto 0px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+footer div .vertical-line {
+  position: absolute;
+  top: -3px;
+  left: 53px;
+  width: 1px;
+  height: 23px;
+  background: var(--text-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -797,7 +820,7 @@ footer {
 
   footer {
     font-size: 14px;
-    padding: 17px;
+    padding: 11px;
   }
 }
 
@@ -805,6 +828,20 @@ footer {
   .contact-container {
     width: 80%;
     padding: 20px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  footer div {
+    font-size: 12px;
+  }
+
+  footer div .vertical-line {
+    top: -3.5px;
+    left: 50px;
   }
 }
 
