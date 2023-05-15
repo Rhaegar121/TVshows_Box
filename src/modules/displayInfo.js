@@ -13,7 +13,7 @@ const displayInfo = async (id) => {
         <i class="fa-solid fa-xmark" id="close${id}"></i>
         <div class="info-card">
             <div class="info-img">
-                <img src="${show.image.original}" alt="${show.name}">
+                <img src="${show.image ? show.image.original : ''}" alt="${show.name}">
             </div>
             <div class="info-text">
                 <h1>${show.name}</h1>
@@ -33,7 +33,7 @@ const displayInfo = async (id) => {
                 <p><span>Runtime :</span>${show.runtime} min</p>
                 <p><span>Type :</span>${show.type}</p>
                 <p><span>Language :</span>${show.language}</p>
-                <p><span>Original Network :</span>${show.network.name}</p>
+                <p><span>Original Network :</span>${show.network ? show.network.name : 'null'}</p>
                 <p><a href="${show.officialSite}">Visit the official site</a></p>
             </div>
         </div>
