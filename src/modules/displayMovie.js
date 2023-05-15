@@ -1,7 +1,6 @@
 import {
   getShow, getFilterShow, getLike, postLike,
 } from './fetch.js';
-import movieCount from './movieCounter.js';
 import displayInfo from './displayInfo.js';
 
 const displayMovie = async () => {
@@ -52,7 +51,7 @@ const displayMovie = async () => {
 
     // counting movies
     const countMovie = document.querySelector('#counter');
-    countMovie.innerHTML = `Total Number of Series: ${movieCount()}`;
+    countMovie.innerHTML = `Total Number of Series: ${showArray.length}`;
 
     // opening info popup page
     const infoBtn = document.getElementById(`info${data.id}`);
@@ -112,7 +111,7 @@ const displayFilterMovie = async (search) => {
 
     // counting movies
     const countMovie = document.querySelector('#counter');
-    countMovie.innerHTML = `Total Number of Series: ${movieCount()}`;
+    countMovie.innerHTML = `Total Number of Series: ${filterArray.length}`;
 
     // opening info popup page
     const infoBtn = document.getElementById(`info${data.show.id}`);
