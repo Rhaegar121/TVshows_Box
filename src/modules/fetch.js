@@ -1,7 +1,13 @@
-import { baseUrl, involvementUrl } from './api.js';
+import { baseUrl, filterUrl, involvementUrl } from './api.js';
 
 const getShow = async () => {
   const response = await fetch(baseUrl);
+  const data = await response.json();
+  return data;
+};
+
+const getFilterShow = async (search) => {
+  const response = await fetch(`${filterUrl}${search}`);
   const data = await response.json();
   return data;
 };
@@ -52,5 +58,5 @@ const postComment = async (id, username, comment) => {
 };
 
 export {
-  getShow, getLike, postLike, getOneShow, getComment, postComment,
+  getShow, getFilterShow, getLike, postLike, getOneShow, getComment, postComment,
 };

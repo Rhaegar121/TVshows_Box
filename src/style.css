@@ -133,9 +133,18 @@ header #link a:first-child {
   border-radius: 3px;
 }
 
-#home {
+#home #container {
   width: 98%;
   display: grid;
+  grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
+  gap: 25px;
+  margin: 100px auto 30px auto;
+  padding-left: 55px;
+}
+
+#home #filter {
+  width: 98%;
+  display: none;
   grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
   gap: 25px;
   margin: 100px auto 30px auto;
@@ -619,7 +628,7 @@ footer div {
   width: fit-content;
   font-size: 13px;
   font-weight: 100;
-  margin: 10px auto 0px auto;
+  margin: 10px auto 0 auto;
   display: flex;
   justify-content: center;
   gap: 15px;

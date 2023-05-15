@@ -1,9 +1,28 @@
 import './style.css';
-import displayData from './modules/displayMovie.js';
+import { displayFilterMovie, displayMovie } from './modules/displayMovie.js';
 
 window.onload = () => {
-  // display home page
-  displayData();
+  // display all shows
+  displayMovie();
+
+  // searchbar
+  const search = document.querySelector('#search');
+  const searchBtn = document.querySelector('#searchBtn');
+  const container = document.querySelector('#container');
+  const filter = document.querySelector('#filter');
+
+  const filterItems = () => {
+    // Get input value and convert to lowercase for case-insensitive matching
+    const searchText = search.value.toLowerCase();
+    // display filtered shows
+    displayFilterMovie(searchText);
+    container.style.display = 'none';
+    filter.style.display = 'grid';
+  };
+
+  searchBtn.onclick = () => {
+    filterItems();
+  };
 
   // changing pages
   const contactBtn = document.querySelector('#contactBtn');
