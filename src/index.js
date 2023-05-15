@@ -1,5 +1,6 @@
 import './style.css';
-import { displayFilterMovie, displayMovie } from './modules/displayMovie.js';
+import displayFilterMovie from './modules/filterShow.js';
+import displayMovie from './modules/displayShow.js';
 
 window.onload = () => {
   // display all shows
