@@ -28,19 +28,29 @@ window.onload = () => {
   const contact = document.querySelector('#contact');
   const home = document.querySelector('#home');
   const counter = document.querySelector('#counter');
+  const allShowBtn = document.querySelector('#allShowBtn');
+
+  // showing all shows
+  allShowBtn.onclick = () => {
+    search.value = '';
+    container.style.display = 'grid';
+    filter.style.display = 'none';
+  };
 
   // showing home page
   homeBtn.onclick = () => {
     home.style.display = 'grid';
     contact.style.display = 'none';
     counter.style.display = 'block';
+    form.style.display = 'block';
   };
 
   // showing contact page
   contactBtn.onclick = () => {
-    contact.style.display = 'block';
     home.style.display = 'none';
+    contact.style.display = 'block';
     counter.style.display = 'none';
+    form.style.display = 'none';
   };
 
   // mobile menu
