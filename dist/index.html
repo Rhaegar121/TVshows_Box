@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies Box</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TVshow Box</title>
     <!-- fontawesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script defer src="runtime.js"></script><script defer src="main.js"></script></head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
+  <body>
     <header>
-            <nav id="logo">
-                <img src="../photo/tvshow logo.jpg" alt="logo">
-            </nav>
-            <nav id="link">
-                <a href="#" id="homeBtn">TV shows</a>
-                <a href="https://www.tvmaze.com/api" target="_blank">API</a>
-                <a href="#" id="contactBtn">Contact</a>
-            </nav>
-            <nav class="hamburger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-          </nav>
+      <nav id="logo">
+        <img src="https://i.imgur.com/7Wq2DnA.png" alt="logo" class="logo" />
+      </nav>
+      <nav id="link">
+        <a href="#" id="homeBtn">TV shows</a>
+        <a href="https://www.tvmaze.com/api" target="_blank">API</a>
+        <a href="#" id="contactBtn">Contact</a>
+      </nav>
+      <nav class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </nav>
     </header>
 
-    <section id="counter">
+    <section id="counter"></section>
+
+    <section>
+      <button type="button" id="allShowBtn">All TVshows</button>
     </section>
 
-    <section id="searchbar">
-      <input type="text" placeholder="Search" name="search" id="search">
-    </section>
+    <form id="searchBar">
+      <input
+        type="text"
+        placeholder="Search TVshow"
+        name="search"
+        id="search"
+      />
+      <button type="submit" id="searchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
 
     <section id="home">
+      <div id="container"></div>
+      <div id="filter"></div>
     </section>
 
-    <section id="info">
-    </section>
+    <section id="info"></section>
 
     <section id="contact">
       <div class="contact-container">
         <h1>Contact Me</h1>
-        <p class="contact-para">Do you have any questions or you just want to say "Hello"? <br> You can reach out to me!</p>
-        <form action="https://formspree.io/f/xpzedzpo" method="POST" id="contact-form">
-            <input
+        <p class="contact-para">
+          Do you have any questions or you just want to say "Hello"? <br />
+          You can reach out to me!
+        </p>
+        <form
+          action="https://formspree.io/f/xpzedzpo"
+          method="POST"
+          id="contact-form"
+        >
+          <input
             type="text"
             placeholder="Full name"
             required
@@ -70,26 +95,44 @@
           <button type="submit">Get in touch</button>
         </form>
         <ul class="social-media-icon-form">
-            <li>
-              <a href="https://twitter.com/kmk194056" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/kaung-myat-kyaw-barry-391720227/" target="_blank"
-                ><i class="fa-brands fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/linthantkhai" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="https://github.com/Rhaegar121" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/rhaegar_121/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
+          <li>
+            <a href="https://twitter.com/kmk194056" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kaung-myat-kyaw-barry-391720227/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/linthantkhai" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Rhaegar121" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/rhaegar_121/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
         </ul>
       </div>
     </section>
-    
-    <footer id="footer">Created by Barry under CC license</footer>
-</body>
+
+    <footer id="footer">
+      <p>Created by Barry under CC license</p>
+      <div>
+        <span>©2023</span>
+        <span class="vertical-line"></span>
+        <span>All right reserved.</span>
+      </div>
+    </footer>
+  </body>
 </html>
