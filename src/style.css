@@ -766,22 +766,30 @@ footer div .vertical-line {
     display: inline-block;
   }
 
+  /* home interface */
+  #searchBar {
+    margin-top: 70px;
+  }
+
+  #allShowBtn {
+    left: 40px;
+    top: 80px;
+    font-size: 14px;
+    padding: 11px;
+  }
+
   #counter {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 11px 0;
     width: 205px;
     font-size: 14px;
-    background-color: #252e39;
-    border-radius: 3px;
+    top: 80px;
+    right: 40px;
   }
 
-  #home {
-    grid-template-columns: 47% 47%;
+  #home #container {
+    grid-template-columns: 31% 31% 31%;
     padding-left: 0;
-    gap: 21px;
+    gap: 22px;
     width: 90%;
   }
 
@@ -918,6 +926,38 @@ footer div .vertical-line {
 }
 
 @media screen and (max-width: 426px) {
+  #search {
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #search::placeholder {
+    font-size: 14px;
+  }
+
+  #searchBtn {
+    padding: 11px 14px 11px 11px;
+    background-color: #252e39;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 16px;
+  }
+
+  #allShowBtn {
+    left: 20px;
+  }
+
+  #counter {
+    right: 20px;
+  }
+
+  #home #container {
+    grid-template-columns: 47% 47%;
+    gap: 21px;
+  }
+
   .contact-container {
     width: 80%;
     padding: 20px;
@@ -939,12 +979,27 @@ footer div .vertical-line {
 }
 
 @media screen and (max-width: 376px) {
-  #home {
+  #home #container {
     gap: 18px;
   }
 
   #home .container img {
     height: 190px;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  #allShowBtn {
+    font-size: 13px;
+    left: 10px;
+    padding: 9px;
+  }
+
+  #counter {
+    font-size: 13px;
+    right: 10px;
+    padding: 9px 0;
+    width: 190px;
   }
 }
 
@@ -958,7 +1013,7 @@ footer div .vertical-line {
     font-size: 13.5px;
   }
 
-  #home {
+  #home #container {
     width: 95%;
     grid-template-columns: 49% 49%;
     gap: 6px;
