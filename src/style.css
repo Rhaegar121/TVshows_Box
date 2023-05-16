@@ -51,10 +51,13 @@ header #logo {
   height: 60px;
 }
 
-header #logo img {
-  border-radius: 50%;
+header #logo .logo {
   box-shadow: none;
   object-fit: cover;
+}
+
+header #logo .logo:hover {
+  cursor: pointer;
 }
 
 header #link {
@@ -71,6 +74,14 @@ header #link a {
 
 header #link a:first-child {
   text-decoration: underline;
+}
+
+header #link a:hover {
+  color: var(--text-color);
+}
+
+header #link a:active {
+  color: var(--text-color);
 }
 
 .hamburger {
@@ -211,7 +222,7 @@ header #link a:first-child {
   display: grid;
   grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
   gap: 25px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding-left: 55px;
 }
 

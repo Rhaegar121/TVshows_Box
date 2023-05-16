@@ -6,6 +6,12 @@ window.onload = () => {
   // display all shows
   displayMovie();
 
+  // refresh page
+  const logo = document.querySelector('#logo');
+  logo.onclick = () => {
+    window.location.reload();
+  };
+
   // searchbar
   const form = document.querySelector('form');
   const search = document.querySelector('#search');
@@ -39,18 +45,24 @@ window.onload = () => {
 
   // showing home page
   homeBtn.onclick = () => {
+    homeBtn.style.textDecoration = 'underline';
+    contactBtn.style.textDecoration = 'none';
     home.style.display = 'grid';
     contact.style.display = 'none';
     counter.style.display = 'block';
     form.style.display = 'block';
+    allShowBtn.style.display = 'block';
   };
 
   // showing contact page
   contactBtn.onclick = () => {
+    contactBtn.style.textDecoration = 'underline';
+    homeBtn.style.textDecoration = 'none';
     home.style.display = 'none';
     contact.style.display = 'block';
     counter.style.display = 'none';
     form.style.display = 'none';
+    allShowBtn.style.display = 'none';
   };
 
   // mobile menu
