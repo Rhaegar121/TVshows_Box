@@ -122,6 +122,60 @@ header #link a:first-child {
 }
 
 /* home interface */
+#searchBar {
+  width: fit-content;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+#search {
+  width: 450px;
+  height: 50px;
+  padding: 0px 25px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: var(--text-color);
+  background-color: #252e39;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#search::placeholder {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+#search:focus {
+  background-color: #1b2530;
+}
+
+#searchBtn {
+  border: none;
+  padding: 14px 16px 14px 12px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #252e39;
+}
+
+#searchBtn:hover {
+  cursor: pointer;
+  background-color: #1b2530;
+}
+
+#searchBtn:hover .fa-magnifying-glass {
+  color: #fff;
+}
+
+.fa-magnifying-glass {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+
 #counter {
   position: absolute;
   text-align: center;
