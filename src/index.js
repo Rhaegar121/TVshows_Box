@@ -7,22 +7,19 @@ window.onload = () => {
   displayMovie();
 
   // searchbar
+  const form = document.querySelector('form');
   const search = document.querySelector('#search');
-  const searchBtn = document.querySelector('#searchBtn');
   const container = document.querySelector('#container');
   const filter = document.querySelector('#filter');
 
-  const filterItems = () => {
+  form.onsubmit = (e) => {
+    e.preventDefault();
     // Get input value and convert to lowercase for case-insensitive matching
     const searchText = search.value.toLowerCase();
     // display filtered shows
     displayFilterMovie(searchText);
     container.style.display = 'none';
     filter.style.display = 'grid';
-  };
-
-  searchBtn.onclick = () => {
-    filterItems();
   };
 
   // changing pages
