@@ -786,6 +786,13 @@ footer div .vertical-line {
     right: 40px;
   }
 
+  #home #filter {
+    grid-template-columns: 31% 31% 31%;
+    padding-left: 0;
+    gap: 22px;
+    width: 90%;
+  }
+
   #home #container {
     grid-template-columns: 31% 31% 31%;
     padding-left: 0;
@@ -952,6 +959,11 @@ footer div .vertical-line {
   #counter {
     right: 20px;
   }
+  
+  #home #filter {
+    grid-template-columns: 47% 47%;
+    gap: 21px;
+  }
 
   #home #container {
     grid-template-columns: 47% 47%;
@@ -979,6 +991,10 @@ footer div .vertical-line {
 }
 
 @media screen and (max-width: 376px) {
+  #home #filter {
+    gap: 18px;
+  }
+
   #home #container {
     gap: 18px;
   }
@@ -1011,6 +1027,11 @@ footer div .vertical-line {
 
   header #link a {
     font-size: 13.5px;
+  }
+
+  #home #filter {
+    grid-template-columns: 49% 49%;
+    gap: 6px;
   }
 
   #home #container {
